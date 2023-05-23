@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voters List</title>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body>
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-bold mb-4">Voters List</h1>
+        <div class="mb-4">
+            <label for="filter" class="mr-2">Filter:</label>
+            <input type="text" id="filter" placeholder="Search voters" oninput="filterVoters()">
+        </div>
+        <table class="table-auto w-full">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2">Voter ID</th>
+                    <th class="border px-4 py-2">Full Name</th>
+                    <th class="border px-4 py-2">Date of Birth</th>
+                    <th class="border px-4 py-2">Phone Number</th>
+                    <th class="border px-4 py-2">Email</th>
+                    <th class="border px-4 py-2">Instagram</th>
+                    <th class="border px-4 py-2">Facebook</th>
+                    <th class="border px-4 py-2">Key Issues</th>
+                    <th class="border px-4 py-2">Data Consent</th>
+                    <th class="border px-4 py-2">Address</th>
+                    <th class="border px-4 py-2">Location</th>
+                    <th class="border px-4 py-2">Referral</th>
+                    <th class="border px-4 py-2">Vote Intent</th>
+                    <th class="border px-4 py-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="voterList">
+                <!-- Voter rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

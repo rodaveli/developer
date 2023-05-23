@@ -42,6 +42,11 @@ The purpose of this CRM system is to efficiently manage and track voters, their 
 ### Map View
 
 6. **Map View of Voters:** The system should provide a map view where users can see all voters as points on the map. Users should be able to input a location and a radius and view all voters within that radius. This view should support filtering based on voter attributes.
+
+Map View should utilize the Google Maps API, with the following credentials:
+
+Google Geocode API key: AIzaSyDM5zZdZCOfguxHyDESvEhzxVJIOeqmGto
+Google Map API Key: AIzaSyDM5zZdZCOfguxHyDESvEhzxVJIOeqmGto
 <!---
 ### Authentication System
 
@@ -62,3 +67,25 @@ The purpose of this CRM system is to efficiently manage and track voters, their 
 - Back-end: Python, SQLite3
 - Front-end: HTML, CSS (Tailwind), JavaScript (for interactive elements)
 
+## Debugging
+
+The file main.py is missing several imports. Go over the imported modules and functions and check that they have been created and written. 
+
+Also, for each of the following files:
+
+1. `main.py`:
+- Check if all the necessary modules are imported correctly.
+- Check if the function calls are correct and the arguments are passed in the correct order.
+- Check if there are any syntax errors or logical errors in the code.
+
+2. `utils.py`:
+- Check if the function definitions are correct and the arguments are named correctly.
+- Check if there are any syntax errors or logical errors in the code.
+
+3. `data.txt`:
+- Check if the data is formatted correctly and there are no missing or extra values.
+- Check if the data is being read correctly in the `main.py` file.
+
+4. `output.txt`:
+- Check if the file is being created and written to correctly in the `main.py` file.
+- Check if the output is formatted correctly and there are no missing or extra values.

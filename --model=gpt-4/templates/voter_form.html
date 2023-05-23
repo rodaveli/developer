@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Form</title>
+    <link rel="stylesheet" href="/static/css/tailwind.css">
+</head>
+<body>
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-4">Voter Form</h1>
+        <form action="/voters" method="POST">
+            <div class="mb-4">
+                <label for="full_name">Full Name</label>
+                <input type="text" name="full_name" id="full_name" class="border-2 border-gray-300 p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" class="border-2 border-gray-300 p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="phone_number">Phone Number</label>
+                <input type="tel" name="phone_number" id="phone_number" class="border-2 border-gray-300 p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="border-2 border-gray-300 p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="instagram">Instagram</label>
+                <input type="text" name="instagram" id="instagram" class="border-2 border-gray-300 p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="facebook">Facebook</label>
+                <input type="text" name="facebook" id="facebook" class="border-2 border-gray-300 p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="key_issues">Key Issues</label>
+                <select name="key_issues" id="key_issues" class="border-2 border-gray-300 p-2 w-full" multiple required>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Public Safety">Public Safety</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Education">Education</option>
+                    <option value="Corruption">Corruption</option>
+                    <option value="Jobs">Jobs</option>
+                    <option value="Economy">Economy</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="data_consent">Data Consent</label>
+                <input type="checkbox" name="data_consent" id="data_consent" class="border-2 border-gray-300 p-2">
+            </div>
+            <div class="mb-4">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" class="border-2 border-gray-300 p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="location">Location (latitude, longitude)</label>
+                <input type="text" name="location" id="location" class="border-2 border-gray-300 p-2 w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="referral">Referral</label>
+                <input type="text" name="referral" id="referral" class="border-2 border-gray-300 p-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="vote_intent">Vote Intent</label>
+                <select name="vote_intent" id="vote_intent" class="border-2 border-gray-300 p-2 w-full" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Maybe">Maybe</option>
+                </select>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2">Submit</button>
+        </form>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

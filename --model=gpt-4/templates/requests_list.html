@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-5">
+    <h1 class="text-2xl font-bold mb-5">Voter Requests</h1>
+    <a href="{{ url_for('request_form') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">Add Request</a>
+    <table class="table-auto w-full">
+        <thead>
+            <tr>
+                <th class="px-4 py-2">Request ID</th>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Description</th>
+                <th class="px-4 py-2">Associated Voter</th>
+                <th class="px-4 py-2">Date Submitted</th>
+                <th class="px-4 py-2">Location</th>
+                <th class="px-4 py-2">Status</th>
+                <th class="px-4 py-2">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in requests %}
+            <tr>
+                <td class="border px-4 py-2">{{ request.request_id }}</td>
+                <td class="border px-4 py-2">{{ request.name }}</td>
+                <td class="border px-4 py-2">{{ request.description }}</td>
+                <td class="border px-4 py-2">{{ request.associated_voter }}</td>
+                <td class="border px-4 py-2">{{ request.date_submitted }}</td>
+                <td class="border px-4 py-2">{{ request.location }}</td>
+                <td class="border px-4 py-2">{{ request.status }}</td>
+                <td class="border px-4 py-2">
+                    <a href="{{ url_for('request_form', request_id=request.request_id) }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded">Edit</a>
+                    <a href="{{ url_for('delete_request', request_id=request.request_id) }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

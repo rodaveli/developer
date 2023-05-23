@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Campaign CRM</title>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+    <script src="/static/js/main.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-500 p-6">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-white text-lg font-bold">Political Campaign CRM</a>
+                <div>
+                    <a href="/login" class="text-white px-4">Login</a>
+                    <a href="/register" class="text-white px-4">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto mt-10">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
