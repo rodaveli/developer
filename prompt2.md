@@ -42,11 +42,11 @@ The purpose of this CRM system is to efficiently manage and track voters, their 
 ### Map View
 
 6. **Map View of Voters:** The system should provide a map view where users can see all voters as points on the map. Users should be able to input a location and a radius and view all voters within that radius. This view should support filtering based on voter attributes.
-
+<!---
 ### Authentication System
 
 7. **User Login and Authentication:** The system should have a secure login and authentication system for users.
-
+-->
 ## Non-Functional Requirements
 
 1. **Performance:** The system should be able to handle a large number of voters and requests, with quick response times for database queries.

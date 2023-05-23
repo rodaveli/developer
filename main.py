@@ -7,7 +7,7 @@ stub = modal.Stub("smol-developer-v1")
 generatedDir = "generated"
 openai_image = modal.Image.debian_slim().pip_install("openai", "tiktoken")
 openai_model = "gpt-4" # or 'gpt-3.5-turbo',
-openai_model_max_tokens = 2000 # i wonder how to tweak this properly
+openai_model_max_tokens = 3000 # i wonder how to tweak this properly
 
 
 @stub.function(
@@ -18,7 +18,7 @@ openai_model_max_tokens = 2000 # i wonder how to tweak this properly
         backoff_coefficient=2.0,
         initial_delay=1.0,
     ),
-    # concurrency_limit=5,
+     concurrency_limit=3,
      timeout=1200,
 )
 def generate_response(system_prompt, user_prompt, *args):
